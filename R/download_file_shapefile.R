@@ -15,12 +15,13 @@
 
 download_file_shapefile <- function(index){
   i <- index
+  require(sf)
   shape <- switch (i,
-    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/IMOVEIS_PUBLICOS_RURAIS.shp"),
-    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/AREA_DE_RISCO.shp"),
-    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/REDE_DRENAGEM.shp"),
-    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/MACROZONAS.shp"),
-    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/LOTEAMENTOS.shp")
+    read_sf(url("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/IMOVEIS_PUBLICOS_RURAIS.shp")),
+    "https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/AREA_DE_RISCO.shp",
+    "https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/REDE_DRENAGEM.shp",
+    "https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/MACROZONAS.shp",
+    "https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/LOTEAMENTOS.shp"
   )
   return(shape)
 }
