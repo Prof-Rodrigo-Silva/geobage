@@ -15,11 +15,12 @@
 
 download_file_shapefile <- function(index){
   i <- index
-  switch (i,
-    "Em breve: Imóveis Públicos Rurais",
-    "Em breve: Área de Risco",
-    "Em breve: Rede de Drenagem",
-    "Em breve: Macrozonas",
-    "Em breve: Loteamentos"
+  shape <- switch (i,
+    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/IMOVEIS_PUBLICOS_RURAIS.shp"),
+    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/AREA_DE_RISCO.shp"),
+    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/REDE_DRENAGEM.shp"),
+    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/MACROZONAS.shp"),
+    download.file("https://github.com/Prof-Rodrigo-Silva/arquivos_geobage/blob/master/LOTEAMENTOS.shp")
   )
+  return(shape)
 }
