@@ -21,6 +21,7 @@ library(geobage)
 }
 \seealso{
 Other general area functions: 
+\code{\link{download_file_shapefile}()},
 \code{\link{read_biome_pampa}()},
 \code{\link{read_census_tract_bg}()},
 \code{\link{read_health_facilities_bg}()},

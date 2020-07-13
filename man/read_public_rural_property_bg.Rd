@@ -7,7 +7,7 @@
 read_public_rural_property_bg()
 }
 \description{
-Function returns the Public rural property inserted in municipality of BagÃ©
+Function returns the Public rural property inserted in municipality of Bage
 }
 \examples{
 \dontrun{
@@ -20,6 +20,7 @@ library(geobage)
 }
 \seealso{
 Other general area functions: 
+\code{\link{download_file_shapefile}()},
 \code{\link{read_biome_pampa}()},
 \code{\link{read_census_tract_bg}()},
 \code{\link{read_conservation_unit_bg}()},
