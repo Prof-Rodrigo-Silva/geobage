@@ -1,6 +1,6 @@
 #' Public rural property
 #'
-#' Function returns the Public rural property inserted in municipality of BagÃ©
+#' Function returns the Public rural property inserted in municipality of Bage
 #'
 #' @export
 #' @family general area functions
@@ -12,6 +12,6 @@
 #'
 #' }
 read_public_rural_property_bg <- function(){
-  #bg <- data(imoveisRuraisPublicos)
-  #bg
+  bg <- download_file_shapefile(1)
+  bg
 }
